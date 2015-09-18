@@ -23,6 +23,7 @@ NSString * const kYelpTokenSecret = @"mqtKIxMIR4iBtBPZCmCLEb-Dz3Y";
 @property (nonatomic, strong) YelpClient *client;
 @property (nonatomic, strong) NSArray *businesses;
 @property (strong, nonatomic) IBOutlet UISearchBar *searchBar;
+@property NSString *searchQuery;
 
 - (void)fetchBusinessesWithQuery:(NSString *)query params:(NSDictionary *)params;
 @end
@@ -54,7 +55,9 @@ NSString * const kYelpTokenSecret = @"mqtKIxMIR4iBtBPZCmCLEb-Dz3Y";
     // Do any additional setup after loading the view from its nib.
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
-    
+    if (!_searchQuery || [_searchQuery isEqualToString:@""]) {
+        self.searchQuery = @"Restaurants";
+    }
     [self.tableView registerNib:[UINib nibWithNibName:@"BusinessCell" bundle:nil] forCellReuseIdentifier:@"BusinessCell"];
     self.navigationController.navigationBar.barTintColor = [UIColor redColor];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Filter" style:UIBarButtonItemStylePlain target:self action:@selector(onFilterButton)];
@@ -95,14 +98,24 @@ NSString * const kYelpTokenSecret = @"mqtKIxMIR4iBtBPZCmCLEb-Dz3Y";
 
 -(void) searchBarSearchButtonClicked:(UISearchBar *)searchBar
 {
-    [self fetchBusinessesWithQuery:searchBar.text params:nil];
+    _searchQuery = searchBar.text;
+    [self fetchBusinessesWithQuery:_searchQuery params:nil];
+}
+
+-(void) searchBarTextDidEndEditing:(UISearchBar *)searchBar
+{
+    _searchQuery = searchBar.text;
+    if([_searchQuery isEqualToString:@""]) {
+        _searchQuery = @"Restaurants";
+    }
+    [self fetchBusinessesWithQuery:_searchQuery params:nil];
 }
 
 #pragma mark - Filter delegate methods
 -(void)filtersViewController:(FiltersViewController *)
 filtersViewController didChangeFilters:(NSDictionary *)filters
 {
-    [self fetchBusinessesWithQuery:@"Restaurants" params:filters];
+    [self fetchBusinessesWithQuery:self.searchQuery params:filters];
     NSLog(@"fire new network event: %@", filters);
 }
 
