@@ -28,6 +28,10 @@
 		A18DEC191BAA2C8800037633 /* FiltersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A18DEC171BAA2C8800037633 /* FiltersViewController.xib */; settings = {ASSET_TAGS = (); }; };
 		A18DEC1D1BAA2CF800037633 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A18DEC1C1BAA2CF800037633 /* MainViewController.xib */; settings = {ASSET_TAGS = (); }; };
 		A18DEC1F1BAA2D1000037633 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A18DEC1E1BAA2D1000037633 /* MainViewController.m */; settings = {ASSET_TAGS = (); }; };
+		A197C4F41BAA3E8D00A7D1C0 /* SwitchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A197C4F21BAA3E8D00A7D1C0 /* SwitchCell.m */; settings = {ASSET_TAGS = (); }; };
+		A197C4F51BAA3E8D00A7D1C0 /* SwitchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A197C4F31BAA3E8D00A7D1C0 /* SwitchCell.xib */; settings = {ASSET_TAGS = (); }; };
+		A1FC0A481BAB75500007CFDD /* SelectorCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A1FC0A461BAB75500007CFDD /* SelectorCell.m */; settings = {ASSET_TAGS = (); }; };
+		A1FC0A491BAB75500007CFDD /* SelectorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1FC0A471BAB75500007CFDD /* SelectorCell.xib */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +76,12 @@
 		A18DEC1C1BAA2CF800037633 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		A18DEC1E1BAA2D1000037633 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		A18DEC201BAA2D1E00037633 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		A197C4F11BAA3E8D00A7D1C0 /* SwitchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwitchCell.h; sourceTree = "<group>"; };
+		A197C4F21BAA3E8D00A7D1C0 /* SwitchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwitchCell.m; sourceTree = "<group>"; };
+		A197C4F31BAA3E8D00A7D1C0 /* SwitchCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SwitchCell.xib; sourceTree = "<group>"; };
+		A1FC0A451BAB75500007CFDD /* SelectorCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectorCell.h; sourceTree = "<group>"; };
+		A1FC0A461BAB75500007CFDD /* SelectorCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectorCell.m; sourceTree = "<group>"; };
+		A1FC0A471BAB75500007CFDD /* SelectorCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelectorCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,6 +222,12 @@
 				A18DEC0F1BAA2C7D00037633 /* BusinessCell.h */,
 				A18DEC101BAA2C7D00037633 /* BusinessCell.m */,
 				A18DEC111BAA2C7D00037633 /* BusinessCell.xib */,
+				A197C4F11BAA3E8D00A7D1C0 /* SwitchCell.h */,
+				A197C4F21BAA3E8D00A7D1C0 /* SwitchCell.m */,
+				A197C4F31BAA3E8D00A7D1C0 /* SwitchCell.xib */,
+				A1FC0A451BAB75500007CFDD /* SelectorCell.h */,
+				A1FC0A461BAB75500007CFDD /* SelectorCell.m */,
+				A1FC0A471BAB75500007CFDD /* SelectorCell.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -262,7 +278,7 @@
 		42FD6C3F18DC286A000BF2B9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = codepath;
 				TargetAttributes = {
 					42FD6C6118DC286B000BF2B9 = {
@@ -297,7 +313,9 @@
 				A18DEC1D1BAA2CF800037633 /* MainViewController.xib in Resources */,
 				A18DEC141BAA2C7D00037633 /* BusinessCell.xib in Resources */,
 				A18DEC191BAA2C8800037633 /* FiltersViewController.xib in Resources */,
+				A1FC0A491BAB75500007CFDD /* SelectorCell.xib in Resources */,
 				42FD6C5D18DC286B000BF2B9 /* Images.xcassets in Resources */,
+				A197C4F51BAA3E8D00A7D1C0 /* SwitchCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,11 +368,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				A18DEC181BAA2C8800037633 /* FiltersViewController.m in Sources */,
+				A197C4F41BAA3E8D00A7D1C0 /* SwitchCell.m in Sources */,
 				A18DEC121BAA2C7D00037633 /* Business.m in Sources */,
 				42FD6C5B18DC286B000BF2B9 /* AppDelegate.m in Sources */,
 				42FD6C5718DC286B000BF2B9 /* main.m in Sources */,
 				A18DEC1F1BAA2D1000037633 /* MainViewController.m in Sources */,
 				420474F618DC299500E88E07 /* YelpClient.m in Sources */,
+				A1FC0A481BAB75500007CFDD /* SelectorCell.m in Sources */,
 				A18DEC131BAA2C7D00037633 /* BusinessCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -415,6 +435,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -477,6 +498,7 @@
 				GCC_PREFIX_HEADER = "Yelp/Yelp-Prefix.pch";
 				INFOPLIST_FILE = "Yelp/Yelp-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.codepath.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -492,6 +514,7 @@
 				GCC_PREFIX_HEADER = "Yelp/Yelp-Prefix.pch";
 				INFOPLIST_FILE = "Yelp/Yelp-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.codepath.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -513,6 +536,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "YelpTests/YelpTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.codepath.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -531,6 +555,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Yelp/Yelp-Prefix.pch";
 				INFOPLIST_FILE = "YelpTests/YelpTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.codepath.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;

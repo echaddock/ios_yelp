@@ -13,6 +13,7 @@
 - (id)initWithDictionary:(NSDictionary *)dictionary {
     self = [super init];
     if (self) {
+        
         NSArray *categories = dictionary[@"categories"];
         NSMutableArray *categoryNames = [NSMutableArray array];
         [categories enumerateObjectsUsingBlock:^(id obj,
@@ -23,7 +24,12 @@
         
         self.name = dictionary[@"name"];
         self.imageUrl = dictionary[@"image_url"];
-        NSString *street = [dictionary valueForKeyPath:@"location.address"][0];
+        NSArray *address = [dictionary valueForKeyPath:@"location.address"];
+        NSString *str = @"Main Street";
+        if (address.count > 0) {
+            str = address[0];
+        }
+        NSString *street = str;
         NSString *neighborhood = [dictionary valueForKeyPath:@"location.neighborhoods"][0];
         self.address = [NSString stringWithFormat:@"%@, %@", street, neighborhood];
         self.numReviews = [dictionary[@"review_count"] integerValue];

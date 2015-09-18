@@ -28,6 +28,7 @@
                 <constraint firstAttribute="trailing" secondItem="GMz-Dk-cBU" secondAttribute="trailing" id="dZH-xv-69k"/>
                 <constraint firstItem="GMz-Dk-cBU" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="fGH-MB-ww6"/>
             </constraints>
+            <point key="canvasLocation" x="356" y="313"/>
         </view>
     </objects>
 </document>
