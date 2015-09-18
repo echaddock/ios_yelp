@@ -24,6 +24,7 @@ NSString * const kYelpTokenSecret = @"mqtKIxMIR4iBtBPZCmCLEb-Dz3Y";
 @property (nonatomic, strong) NSArray *businesses;
 @property (strong, nonatomic) IBOutlet UISearchBar *searchBar;
 @property NSString *searchQuery;
+@property NSDictionary *filters;
 
 - (void)fetchBusinessesWithQuery:(NSString *)query params:(NSDictionary *)params;
 @end
@@ -99,8 +100,9 @@ NSString * const kYelpTokenSecret = @"mqtKIxMIR4iBtBPZCmCLEb-Dz3Y";
 -(void) searchBarSearchButtonClicked:(UISearchBar *)searchBar
 {
     _searchQuery = searchBar.text;
-    [self fetchBusinessesWithQuery:_searchQuery params:nil];
+    [self fetchBusinessesWithQuery:_searchQuery params:self.filters];
 }
+
 
 -(void) searchBarTextDidEndEditing:(UISearchBar *)searchBar
 {
